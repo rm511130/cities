@@ -4,6 +4,8 @@ applications:
   memory: 1G
   instances: 1
   path: build/libs/cities-ui.jar
+  routes:
+  - route: $user-cities-ui.apps.ourpcf.com
   services:
     - cities-ws
   env:
