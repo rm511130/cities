@@ -3,7 +3,7 @@ applications:
 - name: cities-hello
   memory: 1G
   instances: 1
-  host: cities-hello-${random-word}
+  host: $user-cities-hello
   path: build/libs/cities-hello.jar
   env:
     SPRING_PROFILES_DEFAULT: cloud
