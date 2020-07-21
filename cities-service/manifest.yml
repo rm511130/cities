@@ -1,0 +1,13 @@
+applications:
+- name: cities-service
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  path: build/libs/cities-service.jar
+  routes:
+  - route: $user-cities-service.apps.ourpcf.com
+  services:
+  - $user-mysql
+  stack: cflinuxfs3
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
