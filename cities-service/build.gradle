@@ -1,7 +1,9 @@
 buildscript {
     repositories {
-        mavenCentral()
-        maven { url "http://repo.spring.io/milestone" }
+//        mavenCentral()
+        maven { url "https://repo.spring.io/milestone"
+             	url "https://repo.maven.apache.org/maven2"
+              }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.5.RELEASE")
@@ -15,8 +17,8 @@ apply plugin: 'spring-boot'
 apply plugin: 'cloudfoundry'
 
 repositories {
-    mavenCentral()
-    maven { url "http://repo.spring.io/milestone" }
+  //  mavenCentral()
+    maven { url "https://repo.spring.io/milestone" }
 }
 
 dependencies {
